@@ -151,6 +151,8 @@ span.text-red {
   width: 100%;
 }
 .hero-banner-container .beats-solo {
+  z-index: 1;
+  position: relative;
   font-size: 20px;
 }
 .hero-banner-container button {
@@ -173,7 +175,7 @@ span.text-red {
 .hero-banner-container h1 {
   color: white;
   font-size: 10em;
-  margin-left: -20px;
+  /* margin-left: -20px; */
   text-transform: uppercase;
 }
 .hero-banner-image {
@@ -253,6 +255,9 @@ span.text-red {
 }
 .banner-desc .left p {
   margin: 18px;
+}
+.banner-desc .left p:first-child {
+  margin-top: 0;
 }
 .footer-banner-image {
   object-fit: contain;
@@ -358,6 +363,7 @@ span.text-red {
   display: flex;
   gap: 30px;
   padding: 20px;
+  align-items: center;
 }
 .product .cart-product-image {
   object-fit: contain;
@@ -366,10 +372,14 @@ span.text-red {
   border-radius: 15px;
   background-color: #ebebeb;
 }
+.item-desc{
+  width: 100%;
+}
 .item-desc .flex {
   display: flex;
   justify-content: space-between;
-  width: 350px;
+  width: 100%;
+  /* width: 350px; */
   color: #324d67;
 }
 .item-desc .bottom {
@@ -404,7 +414,7 @@ span.text-red {
 }
 
 .btn-container {
-  width: 400px;
+  max-width: 400px;
   margin: auto;
 }
 .btn {
@@ -428,18 +438,19 @@ span.text-red {
 }
 .product-detail-container {
   display: flex;
+  justify-content: center;
   gap: 40px;
   margin: 40px;
   margin-top: 60px;
   color: #324d67;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .product-detail-image {
   border-radius: 15px;
   background-color: #ebebeb;
 
-  width: 400px;
+  max-width: 400px;
   height: 400px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
@@ -451,6 +462,7 @@ span.text-red {
   display: flex;
   gap: 10px;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 .small-image {
   border-radius: 8px;
@@ -471,6 +483,9 @@ span.text-red {
   align-items: center;
 }
 
+.product-detail-desc {
+
+}
 .product-detail-desc h4 {
   margin-top: 10px;
 }
@@ -501,6 +516,7 @@ span.text-red {
 }
 .product-detail-desc .buttons {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 .buttons .add-to-cart {
@@ -634,6 +650,7 @@ span.text-red {
 @media screen and (max-width: 800px) {
   .hero-banner-container {
     height: 560px;
+    
   }
   .hero-banner-image {
     width: 77%;
@@ -642,8 +659,10 @@ span.text-red {
     right: -6%;
   }
   .footer-banner-container {
-    height: 560px;
+    min-height: 560px;
+    height: auto;
     margin-top: 80px;
+    padding: 30px 10px;
   }
   .footer-banner-image {
     width: 77%;
@@ -679,6 +698,8 @@ span.text-red {
     font-size: 50px;
   }
   .hero-banner-container h3 {
+    position: relative;
+    z-index: 1;
     font-size: 40px;
   }
   .hero-banner-container button {
@@ -689,14 +710,15 @@ span.text-red {
     bottom: 60px;
   }
   .product-detail-container {
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
   }
   .product-detail-container .product-detail-image {
-    width: 350px;
+    max-width: 100%;
+    object-fit: contain;
     height: 350px;
   }
   .cart-container {
-    width: 415px;
+    width: 300px;
     padding: 4px;
   }
   .cart-heading {
@@ -723,7 +745,7 @@ span.text-red {
   }
 
   .item-desc .flex {
-    width: 200px;
+    /* width: 200px; */
   }
   .top {
     flex-wrap: wrap;
@@ -757,18 +779,19 @@ span.text-red {
   }
   .success,
   .cancel {
-    width: 370px;
+    width: 100%;
+    max-width: 370px;
     margin-top: 100px;
     padding: 20px;
   }
   .success {
-    height: 350px;
+    min-height: 350px;
   }
   .success h2 {
     font-size: 17px;
   }
   .btn-container {
-    width: 300px;
+    /* width: 300px; */
     margin: auto;
   }
 }
