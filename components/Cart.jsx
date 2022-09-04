@@ -47,6 +47,9 @@ const Cart = () => {
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
+    let vh = window.innerHeight * 0.01;
+
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
     return () => {
       document.body.style.overflow = "";
     };

@@ -299,6 +299,8 @@ span.text-red {
 }
 .cart-container {
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  /* height: 100vh; */
   width: 600px;
   background-color: white;
   float: right;
